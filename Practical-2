@@ -1,0 +1,29 @@
+package part_4;
+
+class Vraj extends Exception
+{
+   public Vraj(String str)
+   {
+       super(str);
+   }
+}
+
+public class Practical_2 {
+	public static void main(String[] args) {
+	       int a=10;
+	       int b=0;
+	       try
+	       {
+	         //  System.out.println(a/b);
+	        throw new Vraj("This is user defined Exception");
+	       }
+	       catch(Vraj m)
+	       {
+	           System.out.println(m.getMessage());
+	           System.out.println("Handled");
+	       }
+	       finally {
+	           System.out.println("Prepared by 21CE088-Vraj Parmar");
+	       }
+	   }
+}
